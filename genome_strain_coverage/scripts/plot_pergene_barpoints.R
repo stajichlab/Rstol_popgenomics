@@ -12,11 +12,10 @@ for ( i in ctgs$V1) {
     pdffile = sprintf("plot/%s.gg.pdf",i)
     Title=sprintf("%s - all strains",i)
     cov <- read.table(filename,header=T,sep="\t")
-    g = ggplot(cov,aes(GENE,COVERAGE) +
+    g = ggplot(cov,aes(GENE,COVERAGE)) +
     labs(title=Title) + 
-      geom_point(alpha=1/2,size=0.5) + scale_colour_brewer(palette = "Set2")
-
-      ggsave(pdffile,g,width=3,height=3)
+    geom_point(alpha=1/2,size=0.5) + scale_colour_brewer(palette = "Set2")
+    ggsave(pdffile,g,width=3,height=3)
 }
 
 #,color=GROUP,group=GROUP)) +
