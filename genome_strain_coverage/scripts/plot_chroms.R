@@ -25,7 +25,7 @@ for ( i in ctgs$V ) {
     fs_row = 5
     fs_col = 5
 
-    pdffile=sprintf("plot/covlot_%s.pdf",i)
+    pdffile=sprintf("plot/covplot_%s.pdf",i)
     pdf(pdffile,height=5,width=5)
     res_t <- pheatmap(chr, fontsize_row = fs_row,
                       fontsize_col = fs_col,
